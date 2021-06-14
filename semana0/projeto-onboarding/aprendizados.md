@@ -1,0 +1,2 @@
+# aprendizados da semana 
+Nessa semana de **onboarding** da labenu eu aprendi muitas coisas novas, compartilhei informações , aprendi sobre o que é um terminal e a mexer nele e usar o vscode e me estressar com o git rs.
