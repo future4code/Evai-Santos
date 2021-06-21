@@ -1,45 +1,85 @@
 // a = 10 e 50 
-// b = ele vai retornar 10 e 50.
+// b = não vai aprecer nada no console.
+
 // 2 - a = a function vai retornar o texto inserido pelo usuario com letra minuscula e verifica se o texto é false ou true.
 // i.   Eu gosto de cenoura , vai retornar true
-//ii.  CENOURA é bom pra vista, vai retornar false
-//iii. Cenouras crescem na terra, vai retornar false
+//ii.  CENOURA é bom pra vista, vai retornar true
+//iii. Cenouras crescem na terra, vai retornar true
 
-// function sobreMim(){
-//    console.log("Eu sou Evai, tenho 33 anos, moro em Santos e sou estudante.")
+// ESCRITA DE CODIGO
+// a
+// const nome = 'Evai'
+// const idade = 33
+// const cidade = 'Santos'
+// const profissao = "estudante"
+
+// function imprimmeMensagem(){
+//     console.log(`Eu sou ${nome}, tenho ${idade} anos, moro em ${cidade}, e sou ${profissao}`)
 // }
 
-// sobreMim()
+// imprimmeMensagem()
 
-// const MeuNome = prompt("Diga seu nome")
-// const MinhaIdade = Number(prompt("Diga sua idade"))
-// const MeuEndereco = prompt("Diga seu endereço")
-// const MinhaProfissao = prompt("Diga a sua profissão")
+// //b
 
-// function meusDadosPessoais(nome,idade, cidade,profissao){
-//     const texto = `Eu sou ${nome}, tenho ${idade}anos, moro em ${cidade}, e sou ${profissao}`
-//     return texto
-// } 
-//   const resultado = meusDadosPessoais(MeuNome,MinhaIdade,MeuEndereco,MinhaProfissao) 
-//   console.log(resultado)
-
-// const numero1 = 4
-// const numero2 = 7
-
-// function somaDoisNumeros (numero1,numero2){
-// return numero1 + numero2
+// function minhaFrase(nome, idade, cidade, profissao){
+//     return `Eu sou ${nome}, tenho ${idade} anos, moro em ${cidade}, e sou ${profissao}`
 // }
-// console.log (somaDoisNumeros(numero1,numero2))
+// const frase = minhaFrase('Evai', 33, 'Santos', 'estudante')
+// console.log(frase)
 
-// const num3 = 9
-// const num4 = 10
-// function maiorIgual (num3,num4){
-//     return num3 >= num4
+// 2 , a 
+// function somaDoisNumeros(num1, num2){
+//     return num1 + num2
 // }
-// console.log (maiorIgual (num3 >= num4))
+// const resultado = somaDoisNumeros(10, 11)
+// console.log(resultado)
 
-// const numeroPar = 6
-// function parOuNao(numeroPar){
-//     return numeroPar % 2 === 0
+// b
+
+// function verificaNumeroMaior(numero1, numero2){
+//     const ehMaior = numero1 >= numero2
 // }
-// console.log (parOuNao(numeroPar))
+
+// const primeiroNumeroMaior = verificaNumeroMaior(20, 12)
+// console.log(primeiroNumeroMaior)
+
+// c
+
+// function verificaSeEhPar(numemo){
+//     return numemo % 2 === 0
+// }
+// const ehPar = verificaSeEhPar(6)
+// console.log(ehPar)
+
+// d 
+
+// function retornaTamanho(texto){
+//     return `${texto.lenght}, ${texto.toUpperCase()}`
+// }
+
+// console.log(retornaTamanho, ('ola pessoal'))
+
+// 3
+// function soma (numero1, numero2){
+//  return numero1 + numero2
+// }
+
+// function subtrai (numero1, numero2){
+//  return numero1 - numero2
+// }
+
+// function multiplica (numero1, numero2){
+//  return numero1 * numero2
+// }
+
+// function divide (numero1, numero2){
+//  return numero1 / numero2
+// }
+
+// const primeiroNumber = Number(prompt("insira o primeiro numero"))
+// const segundoNumber = Number(prompt("insira o segundo numero"))
+
+// console.log("soma: ", soma(primeiroNumber, segundoNumber))
+// console.log("diferença: ", subtrai(primeiroNumber, segundoNumber))
+// console.log("multiplicacão ", multiplica(primeiroNumber, segundoNumber))
+// console.log("divisao: ", divide(primeiroNumber, segundoNumber) )

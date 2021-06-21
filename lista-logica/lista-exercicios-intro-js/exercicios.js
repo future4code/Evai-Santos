@@ -103,24 +103,49 @@ return array
 
 // EXERCÍCIO 12
 function checaIgualdadeDesconsiderandoCase(string1, string2) {
-  
+  return string1.toUpperCase() === string2.toUpperCase()
 
 }
 
 // EXERCÍCIO 13
 function checaRenovacaoRG() {
-  // implemente sua lógica aqui
+  const anoAtual = Number(prompt("diga o ano atual"))
+  const anoNacimento = Number(prompt("diga seu ano de nascimento"))
+  const carteiraIdentidade = Number(prompt("diga o ano de emissão da sua identidade"))
+
+  const idade = anoAtual - anoNacimento
+  const verificaCarteira = anoAtual - carteiraIdentidade
+
+  const menorDeVinte = idade <= 20 && verificaCarteira >= 5 
+  const entreVinteECinquenta = idade > 20 && idade <= 50 && verificaCarteira >= 10
+  const maiorDeCiquenta = idade > 50 && verificaCarteira >= 15 
+  const comparaOsTres = menorDeVinte || entreVinteECinquenta || maiorDeCiquenta
+
+  console.log(comparaOsTres)
 
 }
 
 // EXERCÍCIO 14
 function checaAnoBissexto(ano) {
-  // implemente sua lógica aqui
+  const condicao1 = ano % 400 === 0
+  const condicao2 = ano % 4 === 0 && !(ano % 100 === 0 && !condicao1)
+
+  return condicao1 || condicao2
 
 }
 
 // EXERCÍCIO 15
 function checaValidadeInscricaoLabenu() {
-  // implemente sua lógica aqui
+  const perguntaIdade = prompt("você tem mais de 18 anos?[sim ou não]")
+  const perguntaEscola = prompt("você possui ensino medio completo?[sim ou não]")
+  const pergungtaCurso = prompt("você possui disponibilidade exclusiva durante os horarios de curso?[sim ou não]")
+
+  const idadeSimOuNao = perguntaIdade === "sim"
+  const idadeSimOuNao2 = perguntaEscola === "sim"
+  const idadeSimOuNao3 = pergungtaCurso === "sim"
+
+  const apito = idadeSimOuNao && idadeSimOuNao2 && idadeSimOuNao3
+  console.log(apito)
+  
 
 }
