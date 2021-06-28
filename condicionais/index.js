@@ -79,14 +79,14 @@
 
 // atividade 4
 
-const vamosAoCinema = () => {
-    const tipoDeFilme = prompt("Insira o gênero do filme que você vai assitir")
-    const valorDoTicket = Number(prompt("Qual o valor do ticket?"))
-    if (tipoDeFilme === "fantasia" && valorDoTicket === 18) {
-        console.log("Bom filme")
-    } else {
-        console.log("escolha outro filme")
-    }
-}
+// const vamosAoCinema = () => {
+//     const tipoDeFilme = prompt("Insira o gênero do filme que você vai assitir")
+//     const valorDoTicket = Number(prompt("Qual o valor do ticket?"))
+//     if (tipoDeFilme === "fantasia" && valorDoTicket === 18) {
+//         console.log("Bom filme")
+//     } else {
+//         console.log("escolha outro filme")
+//     }
+// }
 
-vamosAoCinema()
+// vamosAoCinema()
