@@ -1,0 +1,22 @@
+h1 {
+    color: white;
+    background-color: brown;
+    padding: 40px;
+
+}
+p {
+    background-color: burlywood;
+}
+
+p {
+    background-color:brown;
+    color: white;
+}
+
+h2 {
+    color: white;
+    background-color:brown
+}
+body {
+    text-align: center;
+}
