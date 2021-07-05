@@ -1,0 +1,21 @@
+#container {
+    display: flex;
+    border: 1px solid black;
+    justify-content: space-around;
+    align-items: flex-start
+    
+
+}
+
+#container > div {
+    margin: 5px;
+}
+
+#cabecalho {
+    background-color:mediumvioletred ;
+    margin: 5px;
+    display: flex;
+    border: 1px solid black;
+    height: 50px; ;
+    
+}
