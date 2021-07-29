@@ -13,7 +13,7 @@ display:flex;
 
 
 
-export default class TelaListaUsuarios extends React.Component{
+export default class TelaListaUsuarios extends React.Component {
 
     state = {
         usuarios: []
@@ -27,7 +27,7 @@ export default class TelaListaUsuarios extends React.Component{
         const url = "https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users"
         axios.get(url, {
             headers: {
-                Authorization: "evai.santos-lovelace"
+                Authorization: "evai-santos-lovelace"
             }
         })
         
@@ -36,27 +36,40 @@ export default class TelaListaUsuarios extends React.Component{
 
         })
         .catch((err) => {
-            alert("tente novamente")
+            alert("Ocorreu um problema! tente novamente")
 
         })
 
     }
 
-    // deletarUsuario = (id) => {
-    //     const url = `https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/:id`
-    //     axios.delet
+        deletarUsuario = (id) => {
+        const url = `https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users/${id}`
+        axios.delete(url, {
+           headers: {
+            Authorization: "evai-santos-lovelace"
+           }
+        })
+        .then((res) => {
+            alert("Usuaário deletado")
+            this.pegarUsuarios()
+        })
+        .catch((err) => {
+            alert("Ocorreu um erro, tente novamente")
+        })
 
-    // }
+     }
 
 
 
     render() {
-        console.log(this.state.usuarios)
         const listaUsuarios = this.state.usuarios.map((user) => {
-            return <CardUsuario key={user.id}>
+            return (
+            <CardUsuario key={user.id}>
                 {user.name}
-                <button>X</button>
+                <button onClick={() => this.deletarUsuario(user.id)}>X</button>
                 </CardUsuario>
+
+            )
 
         })
 

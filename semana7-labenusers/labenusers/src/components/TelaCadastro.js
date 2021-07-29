@@ -38,7 +38,7 @@ export default class TelaCadastro extends React.Component{
         })
 
         .catch((err) => {
-            alert(err.response.data.menssage)
+            alert(err.response.data.message)
 
         })
 
@@ -51,7 +51,7 @@ export default class TelaCadastro extends React.Component{
                 <h2>Cadastro</h2>
                 <imput 
                 placeholder={"Nome"}
-                value={this.state.name}
+                value={this.state.nome}
                 onChange={this.handleNome}
                 />
 
@@ -62,7 +62,7 @@ export default class TelaCadastro extends React.Component{
                 onChange={this.handleEmail}
 
                 />
-                <button>Cadastrar</button>
+                <button onClick={this.fazerCadastro}>Cadastrar</button>
             </div>
         )
     }

@@ -22,13 +22,13 @@ export default class App extends React.Component {
     }
 
     irParaCadastro = () => {
-        this.setState({telaAtual: "Cadastro"})
+        this.setState({telaAtual: "cadastro"})
 
     }
 
     
     irParaLista = () => {
-        this.setState({telaAtual: "Lista"})
+        this.setState({telaAtual: "lista"})
 
     }
 
@@ -37,7 +37,7 @@ export default class App extends React.Component {
         return (
             <div>
              {this.escolherTela}
-             <h1>teste</h1>
+    
              
             </div>
         )
