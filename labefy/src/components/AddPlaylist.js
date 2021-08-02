@@ -68,8 +68,8 @@ class AddPlaylist extends React.Component {
   };
 
   onChangeNameValue = (event) => {
-    this.setState({ name: event.target.value });
-  };
+    this.setState({ name: event.target.value })
+  }
 
   render() {
     return (

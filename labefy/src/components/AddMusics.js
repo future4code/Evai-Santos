@@ -74,8 +74,8 @@ class AddMusics extends React.Component {
       .then((response) => {
         this.setState({ playlistDetail: response.data.result.tracks });
       })
-      .catch((error) => {
-        console.log(error);
+      .catch((err) => {
+        console.log(err);
       });
   };
 
