@@ -47,7 +47,7 @@ const baseUrl =
 
 const axiosConfig = {
   headers: {
-    Authorization: "rafaela-quinzel-dumont"
+    Authorization: "evai-santos-lovelace"
   }
 };
 
@@ -77,7 +77,7 @@ class Playlists extends React.Component {
   };
 
   deletePlaylist = (listId) => {
-    if (window.confirm("Você tem certeza que deseja deletar esta Playlist?")) {
+    if (window.confirm("Deseja mesmo deletar esta Playlist?")) {
       axios
         .delete(`${baseUrl}/${listId}`, axiosConfig)
         .then(() => {

@@ -53,7 +53,7 @@ class AddPlaylist extends React.Component {
         body,
         {
           headers: {
-            Authorization: "rafaela-quinzel-dumont"
+            Authorization: "evai-santos-lovelace"
           }
         }
       )
