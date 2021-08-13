@@ -1,9 +1,13 @@
 import React from "react"
+import {Container, ContainerMatchs } from "./styled"
+
 
 export const MatchsPage = () => {
     return(
-        <div>
-            Matchs Page
-        </div>
+        <ContainerMatchs>
+        Matchs Page
+        </ContainerMatchs>
+            
+        
     )
 }

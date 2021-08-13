@@ -1,17 +1,17 @@
-import { match } from "minimatch"
-import React from "react"
+import React, {useState, useEffect} from "react"
 import { HomePage } from "./pages/HomePage/HomePage"
 import { MatchsPage } from "./pages/MatchsPage/MatchsPage"
+import {ProfileListItem} from "./components/ProfileListItem/ProfileListItem"
 
 
 
-export default class App extends React.Component {
-  state = {
-    telaAtual: "Home"
-  }
 
-escolherTela = () => {
-  switch (this.state.telaAtual) {
+export default function App ()  {
+  const [telaAtual, setTelaAtual]= useState("Home")
+  
+
+    const escolherTela = () => {
+  switch (telaAtual) {
     case "Home":
       return <HomePage />
       case "Match":
@@ -22,19 +22,20 @@ escolherTela = () => {
   }
 }
 
-mudaTela = (nomeTela) => {
-  this.setState({telaAtual:nomeTela})
+  const mudaTela = (nomeTela) => {
+  setTelaAtual(nomeTela)
 }
 
 
-render() {
 
-  return <div>
-    <button onClick={()=>this.mudaTela("Home")} >Home</button>
-    <button onClick={()=>this.mudaTela("Match")}>Match</button>
-    {this.escolherTela()}</div>
 
-}
+  return (
+  <div>
+    <button onClick={()=>mudaTela("Home")} >Home</button>
+    <button onClick={()=>mudaTela("Match")}>Match</button>
+    {escolherTela()}</div>
+
+  )
   
 }
 
