@@ -1,41 +1,54 @@
-import React, {useState, useEffect} from "react"
+import axios from "axios"
+import React, {useState} from "react"
 import { HomePage } from "./pages/HomePage/HomePage"
-import { MatchsPage } from "./pages/MatchsPage/MatchsPage"
-import {ProfileListItem} from "./components/ProfileListItem/ProfileListItem"
+import { MatchsPage} from "./pages/MatchsPage/MatchsPage"
 
 
 
 
-export default function App ()  {
-  const [telaAtual, setTelaAtual]= useState("Home")
+
+
+  const App = () => {
+  const [currentPage, setCurrentPage]= useState("home")
   
 
-    const escolherTela = () => {
-  switch (telaAtual) {
-    case "Home":
-      return <HomePage />
-      case "Match":
-      return <MatchsPage />
-      default:
-        return <HomePage />
-
+    const changePage = () => {
+    if (currentPage === "home") {
+      setCurrentPage("matchs")
+     } else {
+       setCurrentPage("home")
+     }
   }
-}
 
-  const mudaTela = (nomeTela) => {
-  setTelaAtual(nomeTela)
-}
+
+const url = "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/evai-santos/clear"
+
+
+
+
+  const cleanMatchs = () => {
+    axios.put(url)
+    .then((res) => {
+      alert("Limpeza completa!")
+    })
+    .catch((err) => {
+      console.log(err.response)
+    })
+  }
 
 
 
 
   return (
   <div>
-    <button onClick={()=>mudaTela("Home")} >Home</button>
-    <button onClick={()=>mudaTela("Match")}>Match</button>
-    {escolherTela()}</div>
+    {currentPage === "home" ? <HomePage /> : <MatchsPage />}
+    <button onClick={changePage}>{currentPage === "home" ? "Ir para Matchs" : "Ir para Home"} </button>
+    <button onClick={cleanMatchs}>Limpar Matchs</button>
+    </div>
 
   )
   
 }
+
+export default App;
 

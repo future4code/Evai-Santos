@@ -3,10 +3,10 @@ import { ListItemContainer, RoundImage} from './styled'
 
 
 
-export const ProfileListItem = () => {
+export const ProfileListItem = (props) => {
     return(
         <ListItemContainer>
-            <RoundImage src={"https://picsum.photos/id/1008/367/267"}/>
+            <RoundImage src={"https://picsum.photos/seed/picsum/200/300"}/>
             <h2>Nome Pessoa</h2>
         </ListItemContainer>
     )
