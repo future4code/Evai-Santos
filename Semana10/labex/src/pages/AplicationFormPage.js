@@ -2,7 +2,7 @@ import React from "react"
 
 
 
-export const AplicationForm = () => {
+export const AplicationFormPage = () => {
     return (
         <div>AplicationForm</div>
     )
