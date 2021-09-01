@@ -6,6 +6,8 @@ import RecipeDetailPage from "../pages/RecipDetailPage/RecipeDetailPage";
 import RecipeListPage from "../pages/RecipesListPage/RecipesListPage";
 import SingUpPage from "../pages/SignUpPage/SingUpPage";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import Header from "../components/Header/Header";
+
 
 
 
@@ -18,32 +20,33 @@ import ErrorPage from "../pages/ErrorPage/ErrorPage";
 const Router = () => {
     return(
     <BrowserRouter>
-    <switch>
-        <Router exact path= "/login">
+    <Header />
+    <Switch>
+        <Route exact path= "/login">
            <LoginPage />
-        </Router>
+        </Route>
         
-        <Router exact path= "/adicionar-receita">
+        <Route exact path= "/adicionar-receita">
            <AddRecipePage />
-        </Router>
+        </Route>
 
-        <Router exact path= "/detalhe/:id">
+        <Route exact path= "/detalhe/:id">
            <RecipeDetailPage />
-        </Router>
+        </Route>
 
-        <Router exact path= "/">
+        <Route exact path= "/">
            <RecipeListPage />
-        </Router>
+        </Route>
 
-        <Router exact path= "/cadastro">
+        <Route exact path= "/cadastro">
            <SingUpPage />
-        </Router>
+        </Route>
 
-        <Router >
+        <Route >
            <ErrorPage />
-        </Router>
+        </Route>
 
-    </switch>
+    </Switch>
     
     
     </BrowserRouter>
