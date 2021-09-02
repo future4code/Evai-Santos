@@ -7,7 +7,7 @@ export const goToAddRecipes = (history) => {
 }
 
 
-export const goToSingUp = (history) => {
+export const goToSignUp = (history) => {
     history.push("/cadastro")
 }
 
