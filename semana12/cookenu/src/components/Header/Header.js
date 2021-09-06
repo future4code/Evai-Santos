@@ -10,36 +10,30 @@ import {useHistory} from "react-router-dom"
 
 
 const Header = ({rightButtonText, setRightButtonText}) => {
-  
-    const history = useHistory()
+  const token = localStorage.getItem("token")
+  const history = useHistory()
 
-    const logout = () => {
+  const logout = () => {
       localStorage.removeItem("token")
-    }
+  }
 
-    const rightButtonaction = () => {
-      if(token){
-        logout()
-        setRightButtonText("Login")
-        goToLogin(history)
-
+  const rightButtonAction = () => {
+      if (token){
+          logout()
+          setRightButtonText("Login")
+          goToLogin(history)
       } else {
-         goToLogin(history)
+          goToLogin(history)
       }
-
-      }
-    
-
+  }
 
   return (
-    
       <AppBar position="static">
-          <StyledToolbar> 
-          <Button onClick={() => goToRecipesList(history)} color="inherit">Cookenu</Button>
-          <Button onClick={rightButtonaction}color="inherit">{rightButtonText}</Button>
-        </StyledToolbar>
+          <StyledToolbar>
+              <Button onClick={() => goToRecipesList(history)} color="inherit">Cookenu</Button>
+              <Button onClick={rightButtonAction} color="inherit">{rightButtonText}</Button>
+          </StyledToolbar>
       </AppBar>
-    
   )
 }
 
